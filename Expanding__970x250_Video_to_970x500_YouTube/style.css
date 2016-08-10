@@ -1,0 +1,359 @@
+
+body, body * {
+  vertical-align: baseline;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 9pt;
+  /*color: #fff;*/
+}
+
+
+#main-container {
+  position: absolute;
+  width: 970px;
+  height: 500px;
+ /* box-sizing: border-box;*/
+  top: 0;
+  left: 0;
+}
+
+#collapsed-state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 970px;
+  height: 250px;
+  z-index: 100;
+  cursor: pointer;
+  text-align: center;
+  background-color: #000;
+ /* border: 1px solid black;*/
+  box-sizing: border-box;
+}
+
+#expanded-state {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #F1F1F1;
+  z-index: 200;
+  border: 1px solid black;
+  display: none;
+}
+
+#expanded-exit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  /* IE10 needs a background color otherwise he won't capture clicks */
+  background-color: #FFF;
+  opacity: 0;
+  z-index: 600;
+  visibility: hidden;
+}
+
+#collapsed-exit {
+  background-color: #fff;
+    cursor: pointer;
+    height: 250px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 970px;
+    z-index: 3000;
+}
+
+.button {
+  background-repeat: no-repeat;
+  background-position: left top; 
+  position: absolute; 
+  top: 0px; 
+  left: 0px; 
+  /*left: auto; */
+  bottom: auto; 
+  cursor: pointer; 
+  display: block;
+  z-index: 500;
+  cursor: pointer;
+}
+
+#expand-button {
+  background-image:url(expand.png);
+  top: 209px;
+  width: 174px;
+  left: 400px;
+  line-height: 24px;
+  color: #000;
+  font-family: arial,sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.4px;
+  text-decoration: underline;
+  height: 32px; 
+  z-index: 3200;
+  visibility: hidden;
+}
+
+#collapse-button {
+  background-image:url(https://www.gstatic.com/ads/ci/ytclosebutton/1/close_white.png);
+  top: -3px;
+  left: -3px;
+  display: none;
+  line-height: 24px;
+  color: #fff;
+  font-family: arial,sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.4px;
+  text-decoration: underline;
+  width: 112px; 
+  height: 25px; 
+  z-index:1000;
+  text-align:right;
+  /*text-shadow: 1px 1px #cccccc;*/
+}
+
+.feature-collapsed {
+  top: 1px;
+  left: 0px;
+  width: 970px;
+  height: 247px;
+  position: absolute;
+}
+
+.feature-expanded {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #000;
+}
+
+#video-container-0 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: none;
+  /*z-index: 1500;*/
+  visibility: hidden;
+  /*border:2px solid black;*/
+}
+
+#video-0 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 0px;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+}
+
+.video-controls {
+   position: absolute;
+  width: 18px;
+  height: 18px;
+  bottom: -1px;
+  cursor: pointer;
+  background-color: #FFF;
+  z-index:2100;
+}
+
+/* Video button hiding an positioning */
+.video-controls:hover {
+  border-bottom: 1px solid #666;
+}
+
+#play-btn-0 {
+  left: 10px;
+  background-color: transparent;
+  width:250px;
+  height:40px;
+  bottom:-4px;
+  /*border:1px solid red;*/
+  display:block;
+  /*hide button*/
+  /*display:none;*/
+  border:0;
+  z-index: 3200;
+}
+
+#pause-btn-0 {
+  background-color: transparent;
+    background-image: url("pause.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0 none;
+    bottom: 8px;
+    height: 32px;
+    left: 14px;
+    width: 92px;
+     z-index: 3200;
+}
+
+
+#play1 {
+  background-image:url(play.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+  left:5px;
+  top:-3px;
+  width:92px;
+  height:32px;
+  opacity:0;
+  border:0;
+}
+
+#watch-button1 {
+  background-image:url(watch1.png);
+  top: -3px;
+  width: 92px;
+  left: 5px;
+  line-height: 24px;
+  color: #000;
+  font-family: arial,sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.4px;
+  text-decoration: underline;
+  height: 32px; 
+  opacity:0;
+  z-index: 1500;
+  border:0;
+  /*text-shadow: 1px 1px #cccccc;*/
+
+}
+  
+#progress-bar-0 {
+  position: absolute;
+  background-color: #ff0000;
+  bottom: 1px;
+  height: 4px;
+  /*hide button*/
+  /*display:none;*/
+  
+  visibility:visible;
+}
+
+
+#stop-btn-0 {
+  background-image:url(stop.svg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  left: 120px;
+  /*hide button*/
+  display:none;
+}
+
+#unmute-btn-0 {
+  background-image:url(unmute.png);
+  background-size:cover;
+  background-repeat:no-repeat;
+  right: 0px;
+  background-color: transparent;
+  width:28px;
+  height:28px;
+  bottom:0;
+  display:none;
+}
+
+#mute-btn-0 {
+  background-image:url(mute.png);
+  background-size:cover;
+  background-repeat:no-repeat;
+  bottom:0;
+  visibility: hidden;
+  background-color: transparent;
+  width:28px;
+  height:28px;
+  right:0px;
+  display:none;
+}
+
+#replay-btn-0 {
+  background-image:url(replay.svg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  left: 140px;
+  /*hide button*/
+  visibility:hidden;
+}
+#yt-close {
+  z-index: 3200;
+  top:0px !Important;
+  right:0px !Important;
+}
+#ytp-1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 500;
+  height:497px;
+  width:968px;
+}
+#first-frame {
+  position: absolute;
+  top:0px;
+  left:0px;
+  width:970px;
+  height:250px;
+  background-size: cover;
+  background-image:url(firstframe.png); 
+  background-repeat:no-repeat;
+  background-color: transparent;
+  visibility:hidden;
+}
+#last-frame {
+  position: absolute;
+  top:0px;
+  left:0px;
+  width:970px;
+  height:250px;
+  background-size: cover;
+  background-image:url(lastframe.png);
+  background-repeat:no-repeat;
+  background-color: transparent;
+}
+#last-frame-expanded {
+  position: absolute;
+  top:0px;
+  left:0px;
+  width:970px;
+  height:500px;
+  background-size: cover;
+  background-image:url(lastframeExpanded.png);
+  background-repeat:no-repeat;
+  background-color: transparent;
+  z-index:500;
+  visibility: hidden;
+}
+/*#replay-ytp {
+  background-color: transparent;
+  background-image: url("replay.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  left: 30px;
+  position: absolute;
+  top: 100px;
+  width: 200px;
+  z-index: 500;
+  visibility: hidden;
+}*/
+
+:focus {
+  outline:none;
+}
+::-moz-focus-inner {
+  border:0;
+}
