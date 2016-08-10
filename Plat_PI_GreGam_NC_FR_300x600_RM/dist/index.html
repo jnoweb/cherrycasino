@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<link href="style.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<meta name="ad.size" content="width=x,height=y">
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="stage">
+		<div id="unexpanded">
+            <div id="header">
+                <img src="header.png">
+            </div>
+
+            <div id="video">
+                <img src="video.png">
+            </div>
+
+            <div id="bottom_bar">
+                <img src="xbox-unex.png">
+            </div>
+
+            <div id="expandBtn">
+                <img alt="expand button" src="expand.png" onmouseover="overImg(this)" onmouseout="normalImg(this)" />
+            </div>
+		</div>
+		<div id="expanded">
+			    
+                <div id="close">
+                    <img src="close.png">
+                </div>
+
+				<div id="cta_expanded">
+                    <img src="cta.png" onmouseover="ctaoverImg(this)" onmouseout="ctanormalImg(this)" />
+                </div>
+
+                <video id="vidHolder" width="600" height="338" autoplay="autoplay">
+                    <source src="FR_TRAF_MICR_XBCO_0011_030_F_HD_FORARPPNOSLATE.mp4" type="video/mp4">
+                    <!-- <div id="vidHolder"></div> -->
+                </video>
+
+                <div id="bottom_bar_ex">
+                    <img src="xbox-ex.png">
+                </div>
+
+		</div>
+	</div>
+</div>
+<!-- pause, resume and restart buttons 
+<input type="button" id="pauseBtn" value="pause">
+<input type="button" id="resumeBtn" value="resume">
+<input type="button" id="restartBtn" value="restart">-->
+<!-- Javascript -->
+<!-- <script src="https://cdn.flashtalking.com/frameworks/js/gsap/latest/TweenMax.min.js"></script>
+<script src="https://cdn.flashtalking.com/frameworks/js/api/2/9/html5API.js"></script> -->
+<!-- <script src="manifest.js"></script> -->
+<script type="text/javascript">
+    var El = function(a){
+        return document.getElementById(a);
+    }
+    var unexpanded = El("unexpanded");
+    var expanded = El("expanded");
+   
+     expand = function(e){
+        console.log("EXPAND: "+ expanded)
+        unexpanded.style.display = "none";
+        expanded.style.display = "block";
+        vidHolder.play();
+        //myFT.expand();
+        
+        //anim_expanded();
+
+      },
+
+      contract = function(e){
+        console.log("CONTRACTED: "+ unexpanded)
+        //vid.video.pause();
+        //vid.video.currentTime = 0;
+        unexpanded.style.display = "block";
+        expanded.style.display = "none";
+        vidHolder.pause();
+        // if(e && e.type) {
+        //myFT.contract();
+        // }
+      };
+
+        document.getElementById("expandBtn").addEventListener( "click" , expand );
+        document.getElementById("close").addEventListener( "click" , contract );
+
+        contract();
+
+ //    myFT.applyClickTag(cta_expanded, 1);
+	// myFT.applyButton(expandBtn, expand);
+ //    myFT.applyButton(close, contract);
+    
+    function overImg(x)
+    {
+    // x.style.height="70px";
+    // x.style.width="237px";
+    x.src = "expandover.png";
+    }
+
+    function normalImg(x)
+    {
+    // x.style.height="56px";
+    // x.style.width="218px";
+    x.src = "expand.png";
+    }
+
+    function ctaoverImg(x)
+    {
+    // x.style.height="70px";
+    // x.style.width="237px";
+    x.src = "ctaover.png";
+    }
+
+    function ctanormalImg(x)
+    {
+    // x.style.height="56px";
+    // x.style.width="218px";
+    x.src = "cta.png";
+    }
+
+
+</script>
+<!-- <script src="scripts.js"></script> -->
+<!-- <script src="https://cdn.flashtalking.com/frameworks/js/gsap/latest/TweenMax.min.js"></script> -->
+</body>
+</html>
