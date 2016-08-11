@@ -13,5 +13,5 @@ This was an expandable banner I recently coded prior to the Wimbledon Tennis Tou
 
 Please feel free to give me a shout if you have any questions!
 
-Thanks
+Thanks<br>
 Johnny
